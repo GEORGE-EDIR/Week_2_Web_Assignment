@@ -1,0 +1,210 @@
+/* General page styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #bed54d;
+    color: white;
+    padding: 25px;
+}
+
+.header img {
+    background-color: white;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.header p {
+    margin: 5px 0 0;
+}
+
+
+/* Main content */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(16, 139, 139, 0.08);
+}
+
+h2 {
+    margin-top: 0;
+    color: #1e3a8a;
+}
+
+
+/* Form */
+form {
+    display: grid;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+/* Advanced selector 1: negation pseudo-class */
+input:not([type="submit"]),
+select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+/* Advanced selector 2: focus pseudo-class */
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 4px rgba(37, 99, 235, 0.4);
+}
+
+/* Advanced selector 3: direct child selector */
+.add-expense-section > form {
+    max-width: 600px;
+}
+
+button {
+    width: fit-content;
+    padding: 12px 24px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+
+    /* Required pointer cursor */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+
+/* Expense table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Advanced selector 4: descendant selector */
+.expenses-section td {
+    color: #444;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+thead th {
+    background-color: #8f2478;
+    color: white;
+}
+
+/* Advanced selector 5: position pseudo-class */
+tbody tr:nth-child(even) {
+    background-color: #f0f4ff;
+}
+
+/* Hover effect on table rows */
+tbody tr:hover {
+    background-color: #179839;
+    cursor: default;
+}
+
+
+/* Details section */
+details {
+    padding: 10px;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    color: #5b13e3;
+}
+
+details p {
+    margin-bottom: 0;
+}
+
+
+/* Video */
+.video-section {
+    text-align: center;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #1e3a8a;
+    color: rgb(154, 124, 124);
+    padding: 20px;
+}
+
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    main {
+        width: 95%;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+}
